@@ -1,0 +1,128 @@
+{
+    "book": [
+        {
+            "id": "temp",
+            "title": "Book Template",
+            "authors": [
+                "Daniel Stoughton"
+            ],
+            "convertedBy": [
+                "Daniel Stoughton"
+            ],
+            "publishDate": 1549715846,
+            "contents": [
+                {
+                    "name": "Book Template",
+                    "headers": [
+                        {
+                            "type": "section",
+                            "name": "1. Chapter 1",
+                            "entries": [
+                                "Section Title"
+                            ]
+                        },
+                        "2. Chapter 2",
+                        "3. Chapter 3"
+                    ]
+                }
+            ]
+        }
+    ],
+    "bookData": [
+        {
+            "id": "temp",
+            "data": [
+                {
+                    "type": "section",
+                    "name": "1. Chapter 1",
+                    "entries": [
+                        "A paragraph of text here.",
+                        "Another paragraph for the section.",
+                        {
+                            "type": "entries",
+                            "name": "Section Title",
+                            "entries": [
+                                "Section paragraph text.",
+                                "Another section paragraph.",
+                                "Third and final paragraph.",
+                                {
+                                    "type": "entries",
+                                    "name": "Sub-section Title",
+                                    "entries": [
+                                        "Sub-section paragraph.",
+                                        "Another sub-section paragraph."
+                                    ]
+                                }
+                            ]
+                        },
+                        "Final paragraph of the chapter."
+                    ]
+                },
+                {
+                    "type": "section",
+                    "name": "2. Chapter 2",
+                    "entries": [
+                        "This chapter shows off that you can nest tables",
+                        {
+                            "type": "table",
+                            "name": "Table Name",
+                            "columns": [
+                                "Column 1",
+                                "Column 2",
+                                "Column 3"
+                            ],
+                            "rows": [
+                                [
+                                    "Value 1",
+                                    "Value 2",
+                                    "Value 3"
+                                ],
+                                [
+                                    "value 1",
+                                    "value 2",
+                                    "value 3"
+                                ],
+                                [
+                                    {
+                                        "type": "cell",
+                                        "width": 2,
+                                        "value": "Value 1"
+                                    },
+                                    "value 2"
+                                ]
+                            ]
+                        },
+                        "There are also Lists that can be updated",
+                        {
+                            "type": "list",
+                            "name": "List Name",
+                            "entries": [
+                                "Item 1",
+                                "Item 2",
+                                "Item 3"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "section",
+                    "name": "3. Chapter 3",
+                    "entries": [
+                        "This chapter shows off that images can be nested within the text.",
+                        {
+                            "type": "image",
+                            "name": "Sample Image",
+                            "url": "/img/temp.png"
+                        },
+                        "Images can also be rendered from a base 64 string",
+                        {
+                            "type": "image",
+                            "name": "Sample Image",
+                            "data": "{@base64String}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -4,7 +4,11 @@ body {
 }
 
 h1 {
-    border-bottom: 1px solid #a24ba2;
+    border-bottom: 2px solid #a24ba2;
+    font-weight: bold;
+}
+h2 {
+    border-bottom: 2px solid #a24ba2;
 }
 
 p {

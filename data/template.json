@@ -35,7 +35,7 @@ var data =
             "data": [
                 {
                     "type": "section",
-                    "name": "1. Chapter 1",
+                    "name": "Chapter 1",
                     "entries": [
                         "Section text will allow you to have a title.",
                         "Each string in the json will append as a sentance",
@@ -93,7 +93,7 @@ var data =
                 },
                 {
                     "type": "section",
-                    "name": "2. Chapter 2",
+                    "name": "Chapter 2",
                     "entries": [
                         "This chapter shows off that you can nest tables",
                         {
@@ -139,7 +139,7 @@ var data =
                 },
                 {
                     "type": "section",
-                    "name": "3. Chapter 3",
+                    "name": "Chapter 3",
                     "entries": [
                         "This chapter shows off that images can be nested within the text.",
                         {

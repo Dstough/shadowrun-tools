@@ -37,26 +37,58 @@ var data =
                     "type": "section",
                     "name": "1. Chapter 1",
                     "entries": [
-                        "A paragraph of text here.",
-                        "Another paragraph for the section.",
+                        "Section text will allow you to have a title.",
+                        "Each string in the json will append as a sentance",
                         {
-                            "type": "entries",
-                            "name": "Section Title",
+                            "type": "paragraph",
                             "entries": [
-                                "Section paragraph text.",
-                                "Another section paragraph.",
-                                "Third and final paragraph.",
+                                "A paragraph tag will start a new paragraph.",
+                                "You cannot have a title before a paragraph"
+                            ]
+                        },
+                        {
+                            "type": "section",
+                            "name":"Nested Section Title",
+                            "entries": [
+                                "The section type will start a new paragraph and allow you to have a title.",
+                                "Each nested section will scale down header tag of the title.",
                                 {
-                                    "type": "entries",
-                                    "name": "Sub-section Title",
+                                    "type": "paragraph",
                                     "entries": [
-                                        "Sub-section paragraph.",
-                                        "Another sub-section paragraph."
+                                        "You can nest a section in a paragraph and vice versa",
+                                        "Paragrahps don't scale down the title.",
+                                        {
+                                            "type": "section",
+                                            "name": "A section doesn't need entries"
+                                        },
+                                        {
+                                            "type": "bold",
+                                            "entries":[
+                                                "You can bold specific sentances as well."
+                                            ]
+                                        },
+                                        {
+                                            "type":"underline",
+                                            "entries":[
+                                                "Even underline them if you want."
+                                            ]
+                                        },
+                                        {
+                                            "type":"italic",
+                                            "entries":[
+                                                "Also, italisize them."
+                                            ]
+                                        },
+                                        {
+                                            "type":"strike",
+                                            "entries":[
+                                                "Hell, Ill let you strike them out ."
+                                            ]
+                                        }
                                     ]
                                 }
                             ]
-                        },
-                        "Final paragraph of the chapter."
+                        }
                     ]
                 },
                 {
@@ -93,7 +125,7 @@ var data =
                                 ]
                             ]
                         },
-                        "There are also Lists that can be updated",
+                        "There are also Lists that can be rendered",
                         {
                             "type": "list",
                             "name": "List Name",

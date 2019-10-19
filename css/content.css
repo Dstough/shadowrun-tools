@@ -1,7 +1,8 @@
 .content h1 {
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: bold;
     border-bottom: 2px solid #a24ba2;
+    border-top: 2px solid #a24ba2;
 }
 
 .content h2 {
@@ -37,6 +38,7 @@
     margin-bottom: 2em;
     font-size: 1em;
     page-break-inside: avoid;
+    text-align: justify;
 }
 
 .content table {

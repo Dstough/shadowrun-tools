@@ -1,0 +1,22 @@
+.sidebar {
+    color: #ccc;
+}
+
+.sidebar h1 {
+    font-size: 2em;
+}
+
+.sidebar ul {
+    list-style: none;
+    font-size: 1em;
+    padding-left: 0;
+}
+
+.sidebar ul li {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.sidebar ul ul {
+    padding-left: 25px;
+}

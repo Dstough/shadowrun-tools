@@ -1,0 +1,50 @@
+.content h1 {
+    font-size: 3em;
+    font-weight: bold;
+    border-bottom: 2px solid #a24ba2;
+}
+
+.content h2 {
+    margin-top: 1.5em;
+    font-size: 2em;
+    font-weight: bold;
+    border-bottom: 2px solid #a24ba2;
+}
+
+.content h3 {
+    margin-top: 1.5em;
+    font-size: 1.5em;
+    font-weight: bold;
+    page-break-after: avoid;
+}
+
+.content h4 {
+    font-weight: bold;
+    font-size: 1em;
+    display: inline;
+    margin-right: 5px;
+}
+
+.content h5 {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1em;
+    display: inline;
+    margin-right: 5px;
+}
+
+.content p {
+    margin-bottom: 2em;
+    font-size: 1em;
+    page-break-inside: avoid;
+}
+
+.content table {
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+.content td, .content th {
+    padding: 4px;
+    text-align: center;
+}

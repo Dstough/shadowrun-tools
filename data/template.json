@@ -1,4 +1,4 @@
-var data = 
+var template = 
 {
     "book": [
         {
@@ -13,17 +13,19 @@ var data =
             "publishDate": 1549715846,
             "contents": [
                 {
+                    "type": "list",
                     "name": "Book Template",
-                    "headers": [
+                    "entries": [
+                        "Chapter 1",
                         {
-                            "type": "section",
-                            "name": "1. Chapter 1",
+                            "type": "list",
                             "entries": [
-                                "Section Title"
+                                "Section Title",
+                                "Another Title"
                             ]
                         },
-                        "2. Chapter 2",
-                        "3. Chapter 3"
+                        "Chapter 2",
+                        "Chapter 3"
                     ]
                 }
             ]
@@ -48,43 +50,48 @@ var data =
                         },
                         {
                             "type": "section",
-                            "name":"Nested Section Title",
+                            "name": "Nested Section Title",
                             "entries": [
                                 "The section type will start a new paragraph and allow you to have a title.",
                                 "Each nested section will scale down header tag of the title.",
                                 {
-                                    "type": "paragraph",
+                                    "type": "section",
+                                    "name": "sub-section",
                                     "entries": [
-                                        "You can nest a section in a paragraph and vice versa",
-                                        "Paragrahps don't scale down the title.",
                                         {
                                             "type": "section",
-                                            "name": "A section doesn't need entries"
-                                        },
-                                        {
-                                            "type": "bold",
-                                            "entries":[
-                                                "You can bold specific sentances as well."
+                                            "name": "A section doesn't need entries:",
+                                            "entries": [
+                                                "But it can have them.",
+                                                {
+                                                    "type": "section",
+                                                    "name": "Italic Bold Title:",
+                                                    "entries": [
+                                                        "You can bold specific sentances as well."
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "underline",
+                                                    "entries": [
+                                                        "Even underline them if you want."
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "italic",
+                                                    "entries": [
+                                                        "Also, italisize them."
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "strike",
+                                                    "entries": [
+                                                        "Hell, Ill let you strike them out ."
+                                                    ]
+                                                }
                                             ]
                                         },
-                                        {
-                                            "type":"underline",
-                                            "entries":[
-                                                "Even underline them if you want."
-                                            ]
-                                        },
-                                        {
-                                            "type":"italic",
-                                            "entries":[
-                                                "Also, italisize them."
-                                            ]
-                                        },
-                                        {
-                                            "type":"strike",
-                                            "entries":[
-                                                "Hell, Ill let you strike them out ."
-                                            ]
-                                        }
+                                        "You can nest a section in a paragraph and vice versa",
+                                        "Paragrahps don't scale down the title."
                                     ]
                                 }
                             ]

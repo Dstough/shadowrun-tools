@@ -5,19 +5,23 @@
     <meta charset="utf-8" />
     <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="css/main.css">
+    <link type="text/css" rel="stylesheet" href="css/content.css">
+    <link type="text/css" rel="stylesheet" href="css/sidebar.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/render.js"></script>
-    <script src="data/template.json"></script>
+    <script src="js/body.js"></script>
+    <script src="data/crb.json"></script>
 </head>
 
 <body>
-    <div class="col-lg-3"></div>
+    <div class="col-lg-1"></div>
+    <div class="col-lg-2 sidebar no-print"></div>
     <div class="col-lg-6 content"></div>
     <div class="col-lg-3"></div>
     <script>
         $(function () {
-            $(".content").html(RenderData(data.bookData[0].data));
+            $(".sidebar").html(RenderData(crb.book[0].contents));
+            $(".content").html(RenderData(crb.bookData[0].data));
         });
     </script>
 </body>

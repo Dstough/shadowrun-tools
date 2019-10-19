@@ -142,9 +142,11 @@ function RenderDiv(me, layer) {
     }
 
     if (me['entries'] !== undefined) {
+        message += '<p>';
         me['entries'].forEach(function (entry) {
             message += RenderData(entry, layer + 1);
         });
+        message += '</p>';
     }
 
     message += "</div>";

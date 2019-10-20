@@ -50,3 +50,16 @@
     padding: 4px;
     text-align: center;
 }
+
+.content .inset {
+    background-color: #555;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px black;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.content .highlight {
+    color: #f084f0;
+}

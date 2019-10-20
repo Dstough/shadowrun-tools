@@ -41,9 +41,39 @@ function RenderData(me, layer = 1) {
     else if (me['type'] === 'list') {
         message = RenderList(me, layer);
     }
+    else if (me['type'] === 'inset') {
+        message = RenderInset(me, layer);
+    }
+    else if (me['type'] === 'highlight') {
+        message = RenderHighlight(me, layer);
+    }
 
     //TODO: render images.
 
+    return message;
+}
+
+function RenderHighlight(me, layer) {
+    let message = '';
+    if (me['entries'] !== undefined) {
+        message += '<span class = "highlight">';
+        me['entries'].forEach(function (entry) {
+            message += RenderData(entry, layer);
+        });
+        message += '</span>';
+    }
+    return message;
+}
+
+function RenderInset(me, layer) {
+    let message = '';
+    if (me['entries'] !== undefined) {
+        message += '<span class="inset">';
+        me['entries'].forEach(function (entry) {
+            message += RenderData(entry, layer);
+        });
+        message += '</span>';
+    }
     return message;
 }
 
@@ -142,7 +172,7 @@ function RenderDiv(me, layer) {
     }
 
     if (me['entries'] !== undefined) {
-        message += '<p>';
+        message += '<p>'; 0
         me['entries'].forEach(function (entry) {
             message += RenderData(entry, layer + 1);
         });

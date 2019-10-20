@@ -9,4 +9,8 @@ body {
     .no-print {
         display: none;
     }
+    .content {
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
 }

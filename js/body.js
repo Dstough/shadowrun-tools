@@ -14,37 +14,37 @@ function RenderData(me, layer = 1) {
     else if (Array.isArray(me)) {
         message = RenderArray(me, layer);
     }
-    else if (typeof me !== 'object' || me['type'] === undefined) {
+    else if (typeof me !== 'object' || me.type === undefined) {
         message = '';
     }
-    else if (me['type'] === 'section') {
+    else if (me.type === 'section') {
         message = RenderDiv(me, layer);
     }
-    else if (me['type'] === 'paragraph') {
+    else if (me.type === 'paragraph') {
         message = RenderP(me, layer);
     }
-    else if (me['type'] === 'italic') {
+    else if (me.type === 'italic') {
         message = RenderI(me, layer);
     }
-    else if (me['type'] === 'bold') {
+    else if (me.type === 'bold') {
         message = RenderB(me, layer);
     }
-    else if (me['type'] === 'underline') {
+    else if (me.type === 'underline') {
         message = RenderU(me, layer);
     }
-    else if (me['type'] === 'strike') {
+    else if (me.type === 'strike') {
         message = RenderDel(me, layer);
     }
-    else if (me['type'] === 'table') {
+    else if (me.type === 'table') {
         message = RenderTable(me, layer);
     }
-    else if (me['type'] === 'list') {
+    else if (me.type === 'list') {
         message = RenderList(me, layer);
     }
-    else if (me['type'] === 'inset') {
+    else if (me.type === 'inset') {
         message = RenderInset(me, layer);
     }
-    else if (me['type'] === 'highlight') {
+    else if (me.type === 'highlight') {
         message = RenderHighlight(me, layer);
     }
 
@@ -55,9 +55,9 @@ function RenderData(me, layer = 1) {
 
 function RenderHighlight(me, layer) {
     let message = '';
-    if (me['entries'] !== undefined) {
+    if (me.entries !== undefined) {
         message += '<span class = "highlight">';
-        me['entries'].forEach(function (entry) {
+        me.entries.forEach(function (entry) {
             message += RenderData(entry, layer);
         });
         message += '</span>';
@@ -67,9 +67,9 @@ function RenderHighlight(me, layer) {
 
 function RenderInset(me, layer) {
     let message = '';
-    if (me['entries'] !== undefined) {
+    if (me.entries !== undefined) {
         message += '<span class="inset">';
-        me['entries'].forEach(function (entry) {
+        me.entries.forEach(function (entry) {
             message += RenderData(entry, layer);
         });
         message += '</span>';
@@ -79,12 +79,12 @@ function RenderInset(me, layer) {
 
 function RenderList(me, layer) {
     let message = '';
-    if (me['name'] !== undefined) {
-        message += '<h' + layer + '>' + me['name'] + '</h' + layer + '>';
+    if (me.name !== undefined) {
+        message += '<h' + layer + '>' + me.name + '</h' + layer + '>';
     }
     message += '<ul>';
-    if (me['entries'] !== undefined) {
-        me['entries'].forEach(function (entry) {
+    if (me.entries !== undefined) {
+        me.entries.forEach(function (entry) {
             message += '<li>' + RenderData(entry, layer + 1) + '</li>';
         });
     }
@@ -102,9 +102,9 @@ function RenderArray(arr, layer) {
 
 function RenderI(me, layer) {
     let message = '';
-    if (me['entries'] !== undefined) {
+    if (me.entries !== undefined) {
         message += '<i>';
-        me['entries'].forEach(function (entry) {
+        me.entries.forEach(function (entry) {
             message += RenderData(entry, layer);
         });
         message += '</i>';
@@ -114,9 +114,9 @@ function RenderI(me, layer) {
 
 function RenderDel(me, layer) {
     let message = '';
-    if (me['entries'] !== undefined) {
+    if (me.entries !== undefined) {
         message += '<span style="text-decoration: line-through;">';
-        me['entries'].forEach(function (entry) {
+        me.entries.forEach(function (entry) {
             message += RenderData(entry, layer);
         });
         message += '</span>';
@@ -126,9 +126,9 @@ function RenderDel(me, layer) {
 
 function RenderU(me, layer) {
     let message = '';
-    if (me['entries'] !== undefined) {
+    if (me.entries !== undefined) {
         message += '<u>';
-        me['entries'].forEach(function (entry) {
+        me.entries.forEach(function (entry) {
             message += RenderData(entry, layer);
         });
         message += '</u>';
@@ -138,9 +138,9 @@ function RenderU(me, layer) {
 
 function RenderB(me, layer) {
     let message = '';
-    if (me['entries'] !== undefined) {
+    if (me.entries !== undefined) {
         message += '<b>';
-        me['entries'].forEach(function (entry) {
+        me.entries.forEach(function (entry) {
             message += RenderData(entry, layer);
         });
         message += '</b>';
@@ -150,9 +150,9 @@ function RenderB(me, layer) {
 
 function RenderP(me, layer) {
     let message = '';
-    if (me['entries'] !== undefined) {
+    if (me.entries !== undefined) {
         message += '<p>';
-        me['entries'].forEach(function (entry) {
+        me.entries.forEach(function (entry) {
             message += RenderData(entry, layer);
         });
         message += '</p>';
@@ -161,19 +161,19 @@ function RenderP(me, layer) {
 }
 
 function RenderDiv(me, layer) {
-    if (me['name'] === undefined && me['entries'] === undefined) {
+    if (me.name === undefined && me.entries === undefined) {
         return '';
     }
 
     let message = '<div>';
 
-    if (me['name'] !== undefined) {
-        message += '<h' + layer + '>' + me['name'] + '</h' + layer + '>';
+    if (me.name !== undefined) {
+        message += '<h' + layer + '>' + me.name + '</h' + layer + '>';
     }
 
-    if (me['entries'] !== undefined) {
+    if (me.entries !== undefined) {
         message += '<p>'; 0
-        me['entries'].forEach(function (entry) {
+        me.entries.forEach(function (entry) {
             message += RenderData(entry, layer + 1);
         });
         message += '</p>';
@@ -185,31 +185,31 @@ function RenderDiv(me, layer) {
 }
 
 function RenderTable(me, layer) {
-    if (me['columns'] === undefined || !Array.isArray(me['columns'])) {
+    if (me.columns === undefined || !Array.isArray(me.columns)) {
         return '';
     }
 
     let message = '<div>';
 
-    if (me['name'] !== undefined) {
-        message += '<h' + layer + '>' + me['name'] + '</h' + layer + '>';
+    if (me.name !== undefined) {
+        message += '<h' + layer + '>' + me.name + '</h' + layer + '>';
     }
 
     message += '<table><thead><tr>';
 
-    me['columns'].forEach(function (column) {
+    me.columns.forEach(function (column) {
         message += '<th>' + RenderData(column, layer) + '</th>';
     });
 
     message += "</tr></thead><tbody>"
 
-    if (me['rows'] !== undefined) {
-        me['rows'].forEach(function (row) {
+    if (me.rows !== undefined) {
+        me.rows.forEach(function (row) {
             message += '<tr>';
             row.forEach(function (cell) {
                 message += '<td';
-                if (cell['type'] === 'cell' && cell['width'] !== undefined)
-                    message += ' colspan ="' + cell['width'] + '">' + RenderData(cell['value'], layer) + '</td>';
+                if (cell.type === 'cell' && cell.width !== undefined)
+                    message += ' colspan ="' + cell.width + '">' + RenderData(cell.value, layer) + '</td>';
                 else
                     message += '>' + RenderData(cell, layer);
                 message += '</td>';

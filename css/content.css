@@ -21,13 +21,13 @@
 
 .content h4 {
     font-weight: bold;
+    font-style: italic;
     font-size: 1em;
     display: inline;
     margin-right: 5px;
 }
 
 .content h5 {
-    font-weight: bold;
     font-style: italic;
     font-size: 1em;
     display: inline;

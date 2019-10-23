@@ -14,14 +14,14 @@
 </head>
 
 <body>
-    <div class="col-lg-1"></div>
-    <div class="col-lg-2 sidebar no-print"></div>
-    <div class="col-lg-6 content"></div>
-    <div class="col-lg-3"></div>
+    <div class="col-sm-1"></div>
+    <div class="col-md-2 no-print"><span class="sidebar"></div></div>
+    <div class="col-sm-6 content"></div>
+    <div class="col-sm-3"></div>
     <script>
         $(function () {
-            $(".sidebar").html(RenderData(crb.book[0].contents));
-            $(".content").html(RenderData(crb.bookData[0].data));
+            $(".sidebar").html(RenderData(crb.book.contents));
+            $(".content").html(RenderData(crb.bookData.data));
         });
     </script>
 </body>

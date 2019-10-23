@@ -1,5 +1,6 @@
 .sidebar {
     color: #ccc;
+    position: fixed;
 }
 
 .sidebar h1 {
@@ -13,10 +14,19 @@
 }
 
 .sidebar ul li {
-    padding-top: 3px;
-    padding-bottom: 3px;
+    border-bottom: solid 1px grey;
+}
+
+.sidebar ul li:last-child {
+    border-bottom: 0;
 }
 
 .sidebar ul ul {
     padding-left: 25px;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: inherit;
+    }
 }

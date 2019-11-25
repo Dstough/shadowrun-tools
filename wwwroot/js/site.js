@@ -1,4 +1,48 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿function RenderBookNavigation(content, target) {
+    var html = '<ul>';
+    html += '<li id="bookmark-show-all">Show All</li>'
+    html += Recurse($('.' + content).find('h1'));
+    html += '</ul>';
+    $('.' + target).html(html);
+}
 
-// Write your JavaScript code.
+function Recurse(list, level = 1) {
+    var html = '';
+    list.each(function () {
+        html += '<li id="bookmark-' + this.id + '">' + $(this).html() + '</li>';
+        if ($(this).nextUntil('h' + level, 'h' + (level + 1)).length)
+            html += '<ul>';
+        html += Recurse($(this).nextUntil('h' + level, 'h' + (level + 1)), level + 1);
+        if ($(this).nextUntil('h' + level, 'h' + (level + 1)).length)
+            html += '</ul>';
+    });
+    return html;
+}
+
+function ShowAllSections(content) {
+    $('.' + content).children().each(function () {
+        $(this).fadeIn();
+    });
+}
+
+function ShowSection(content) {
+
+    var tag = $('#' + content).get(0).nodeName.toLowerCase();
+
+    if (tag === 'h2')
+        tag += ',h1';
+    else if (tag === 'h3')
+        tag += ',h2,h1';
+    else if (tag === 'h4')
+        tag += ',h3,h2,h1';
+    else if (tag === 'h5')
+        tag += ',h4,h3,h2,h1';
+    else if (tag === 'h6')
+        tag += ',h5,h4,h3,h2,h1';
+
+    var section = $('#' + content).nextUntil(tag).addBack();
+
+    section.each(function () {
+        $(this).fadeIn();
+    });
+}

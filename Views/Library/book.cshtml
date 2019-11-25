@@ -1,14 +1,30 @@
 ﻿@using System.Web;
 @model Book
 
-<div class="col-md-2"></div>
 <div class="col-md-6 content"></div>
-<div class="col-md-2 no-print"><span class="sidebar"></span></div>
-<div class="col-md-2"></div>
+<div class="col-md-2 sidebar no-print"></div>
 
 <script>
     $(function () {
-        var converter = new showdown.Converter({ tables: true, strikethrough: true });
-        $('.content').html(converter.makeHtml('@HttpUtility.JavaScriptStringEncode(Model.content)'));
+        $('.content').html(new showdown.Converter({ tables: true, strikethrough: true }).makeHtml('@HttpUtility.JavaScriptStringEncode(Model.content)'));
+        RenderBookNavigation('content', 'sidebar');
+
+        $('.sidebar li').click(function () {
+
+            var parent = this;
+
+            $('.content').children().each(function () {
+
+                $(this).hide();
+
+            });
+
+            if (parent.id === 'bookmark-show-all') {
+                ShowAllSections('content');
+            }
+            else {
+                ShowSection(parent.id.replace('bookmark-', ''));
+            }
+        });
     });
 </script>

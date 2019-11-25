@@ -1,0 +1,14 @@
+﻿@using System.Web;
+@model Book
+
+<div class="col-md-2"></div>
+<div class="col-md-6 content"></div>
+<div class="col-md-2 no-print"><span class="sidebar"></span></div>
+<div class="col-md-2"></div>
+
+<script>
+    $(function () {
+        var converter = new showdown.Converter({ tables: true, strikethrough: true });
+        $('.content').html(converter.makeHtml('@HttpUtility.JavaScriptStringEncode(Model.content)'));
+    });
+</script>

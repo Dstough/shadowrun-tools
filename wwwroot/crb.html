@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+    <link type="text/css" rel="stylesheet" href="css/content.css">
+    <link type="text/css" rel="stylesheet" href="css/sidebar.css">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/body.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.js"></script>
+</head>
+
+<body>
+    <div class="col-md-2"></div>
+    <div class="col-md-6 content"></div>
+    <div class="col-md-2 no-print"><span class="sidebar"></span></div>
+    <div class="col-md-2"></div>
+    <script>
+        $(function () {
+            var converter = new showdown.Converter({ tables: true, strikethrough: true });
+            $.ajax({
+                url: "data/Template.md",
+                dataType: "text",
+                success: function (data) {
+                    $('.content').html(converter.makeHtml(text));
+                }
+            });
+            //$(".sidebar").html(RenderData(crb.book.contents));
+            //$(".content").html(RenderData(crb.bookData.data));
+        });
+    </script>
+</body>
+
+</html>

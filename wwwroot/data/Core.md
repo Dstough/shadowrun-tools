@@ -105,13 +105,31 @@ It contributes to the total ammount of damage that the character can take as wel
 The body rating is also used to resist toxins that effect the character.
 
 #### (A)gility:
-The atrribute that determins how quick and nimble the character is.
+The attrribute that determins how quick and nimble the character is.
 It contributes to the dice pools rolled when performing attacks with both ranged and melee weapons.
 The agility rating is also used in many key athetic skill tests.
 
 #### (R)eaction:
+The attribute that determins the characters ability to respond to threats.
+It contributes to the dice pools rolled when defending against attacks and adds to the characters initiative score.
+The reaction score is also used in piloting vehicles and drones.
+
 #### (S)trength:
+The attribute that determins the physical power of the character.
+It contributes to the damage dealt by melee weapons wielded by the character.
+The strength score also contributes to certain skill tests and certain weapons require a minimum score to use.
+
 #### (W)illpower:
+The attribute that determins the characters ability to focus their concentration.
+It contributes to certian skill tests when characters use an action to boost them.
+The willpower attribute could also be used for resisting spell drain.
+
 #### (L)ogic:
-#### (I)ntellect:
+The attribute that determins how well the character can remember past experiences and facts.
+It contributes to many mental skill tests and is used for hacking the matrix.
+The logic attribute also determins how many knowledge skills and languages the character knows.
+
+#### (I)ntuition:
+
+
 #### (C)harisma:

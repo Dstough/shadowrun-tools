@@ -21,8 +21,9 @@ namespace shadowrun_tools.Controllers
                 
                 foreach (var item in Directory.GetFiles(_env.WebRootPath + "/data/"))
                     rootBooks.Add(Path.GetFileNameWithoutExtension(item));
-
-                library.Contents.Add("root directory", rootBooks);
+                
+                if(rootBooks.Count != 0)
+                    library.Contents.Add("root directory", rootBooks);
 
                 foreach (var directory in Directory.GetDirectories(_env.WebRootPath + "/data/"))
                 {

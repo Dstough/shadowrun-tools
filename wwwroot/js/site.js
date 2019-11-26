@@ -1,6 +1,5 @@
 ﻿function RenderBookNavigation(content, target) {
-    var html = '<ul>';
-    html += '<li id="bookmark-show-all">Show All</li>'
+    var html = '<ul><li id="bookmark-show-all">Show All</li></ul><ul>';
     html += Recurse($('#' + content).find('h1'));
     html += '</ul>';
     $('#' + target).html(html);

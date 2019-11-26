@@ -14,15 +14,15 @@ namespace shadowrun_tools.Controllers
 
         public ActionResult Index()
         {
-            return HandleExceptions(()=> 
-            {    
+            return HandleExceptions(() =>
+            {
                 var library = new Library();
                 var rootBooks = new List<string>();
-                
+
                 foreach (var item in Directory.GetFiles(_env.WebRootPath + "/data/"))
                     rootBooks.Add(Path.GetFileNameWithoutExtension(item));
-                
-                if(rootBooks.Count != 0)
+
+                if (rootBooks.Count != 0)
                     library.Contents.Add("root directory", rootBooks);
 
                 foreach (var directory in Directory.GetDirectories(_env.WebRootPath + "/data/"))
@@ -32,9 +32,10 @@ namespace shadowrun_tools.Controllers
                     foreach (var item in Directory.GetFiles(directory))
                         books.Add(Path.GetFileNameWithoutExtension(item));
 
-                    library.Contents.Add(Path.GetFileName(directory), books);
+                    if (books.Count != 0)
+                        library.Contents.Add(Path.GetFileName(directory), books);
                 }
-                
+
                 return View(library);
             });
         }

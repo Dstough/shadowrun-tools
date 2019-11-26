@@ -1,9 +1,23 @@
 ﻿function RenderBookNavigation(content, target) {
     var html = '<ul>';
     html += '<li id="bookmark-show-all">Show All</li>'
-    html += Recurse($('.' + content).find('h1'));
+    html += Recurse($('#' + content).find('h1'));
     html += '</ul>';
-    $('.' + target).html(html);
+    $('#' + target).html(html);
+
+    $('#' + target + ' li').on('click', function () {
+
+        $('#' + content).children().each(function () {
+            $(this).hide();
+        });
+
+        if (this.id === 'bookmark-show-all') {
+            ShowAllSections(content);
+        }
+        else {
+            ShowSection(this.id.replace('bookmark-', ''));
+        }
+    });
 }
 
 function Recurse(list, level = 1) {
@@ -20,7 +34,7 @@ function Recurse(list, level = 1) {
 }
 
 function ShowAllSections(content) {
-    $('.' + content).children().each(function () {
+    $('#' + content).children().each(function () {
         $(this).fadeIn();
     });
 }

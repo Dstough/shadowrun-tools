@@ -1,18 +1,19 @@
-.sidebar {
+#sidebar {
     color: #ccc;
 }
 
-    .sidebar h1 {
+    #sidebar h1 {
         font-size: 2em;
     }
 
-    .sidebar ul {
+    #sidebar ul {
         list-style: none;
         font-size: 1em;
         padding-left: 0;
+        margin-bottom:1em;
     }
 
-        .sidebar ul li {
+        #sidebar ul li {
             margin-top: 1px;
             padding-bottom: 1px;
             border-bottom: solid 1px grey;
@@ -21,25 +22,25 @@
             cursor: pointer;
         }
 
-            .sidebar ul li::before {
+            #sidebar ul li::before {
                 content: '> ';
             }
 
-            .sidebar ul li:hover {
+            #sidebar ul li:hover {
                 background-color: #333;
             }
 
-            .sidebar ul li:last-child {
+            #sidebar ul li:last-child {
                 border-bottom: 0;
                 margin-bottom: 0;
             }
 
-        .sidebar ul ul {
+        #sidebar ul ul {
             padding-left: 25px;
         }
 
 @media (max-width: 1200px) {
-    .sidebar {
+    #sidebar {
         position: inherit;
     }
 }

@@ -1,4 +1,4 @@
-.content h1 {
+#content h1 {
     font-size: 2.5em;
     font-weight: bold;
     border-bottom: 2px solid #a24ba2;
@@ -6,7 +6,7 @@
     display: inline-block;
 }
 
-.content h2 {
+#content h2 {
     margin-top: 1.5em;
     font-size: 2em;
     font-weight: bold;
@@ -14,49 +14,54 @@
     display: inline-block;
 }
 
-.content h3 {
+#content h3 {
     margin-top: 1.5em;
     font-size: 1.5em;
     font-weight: bold;
     page-break-after: avoid;
 }
 
-.content h4 {
+#content h4 {
     font-weight: bold;
     font-size: 1em;
     margin-right: 5px;
 }
 
-.content h5 {
+#content h5 {
     font-weight: bold;
     font-style: italic;
     font-size: 1em;
     margin-right: 5px;
 }
 
-.content blockquote p {
+#content blockquote p {
     text-indent: 0px;
 }
 
-.content p {
-    margin-bottom: 2em;
+#content p {
+    margin-bottom: 0;
     font-size: 1em;
     page-break-inside: avoid;
     text-align: justify;
     text-indent: 20px;
 }
 
-.content table {
+    #content p + p {
+        margin-top: 2em;
+    }
+
+#content table {
     margin-bottom: 1em;
     width: 100%;
 }
 
-.content td, .content th {
+#content td,
+#content th {
     padding: 4px;
     text-align: center;
 }
 
-.content blockquote {
+#content blockquote {
     background-color: #333;
     padding: 10px;
     border-radius: 5px;

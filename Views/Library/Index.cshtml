@@ -1,0 +1,15 @@
+﻿@model Library
+
+<div class="col-md-8">
+    <h2>Index</h2>
+    @foreach (var key in Model.Contents.Keys)
+    {
+        <div class="table">
+            <div class="header">@key</div>
+            @foreach (var book in Model.Contents[key])
+            {
+                <div class="body" onclick="location.href = '/Library/Book/@book';">@book</div>
+            }
+        </div>
+    }
+</div>

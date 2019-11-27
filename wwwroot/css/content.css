@@ -79,15 +79,29 @@
     }
 
     #content table {
-        margin-bottom: 1em;
         width: 100%;
+        table-layout: fixed;
+        margin-bottom: 1em;
     }
 
     #content td,
     #content th {
-        padding: 4px;
+        padding: 0;
         text-align: center;
+        overflow-x: hidden;
+        text-overflow: ellipsis;
     }
+
+    #content th {
+        color: #a24ba2;
+    }
+
+    #content th,
+    #content tr:nth-child(even) {
+        background-color: #111;
+    }
+
+
 
     #content blockquote {
         background-color: #222;
@@ -99,11 +113,13 @@
         display: inline-block;
         margin-bottom: 10px;
         font-size: 1em;
+        z-index: -2;
     }
 
         #content blockquote p {
             margin-bottom: 0;
         }
+
 
 @media print {
     #content blockquote {

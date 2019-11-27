@@ -12,8 +12,9 @@ Each nested section will scale down header tag of the title.
 ### Sub-section 
 Here's our logo (hover to see the title text): 
 ![alt text](http://scp-wiki.wdfiles.com/local--files/scp-009/SCP-009.jpg)
-> You can nest a section in a paragraph and vice versa.
-> Paragrahps don't scale down the title.
+> >You can nest a section in a paragraph and vice versa.
+> 
+>Paragrahps don't scale down the title.
 
 #### A section doesn't need entries:
 ##### Italic Bold Title:
@@ -21,10 +22,20 @@ Here's our logo (hover to see the title text):
 *Also, italisize them.*
 ~~Hell, I'll let you strike them out.~~
 
----   
+### Average Human  
+|   B   |   A   |   R   |   S   |   W   |   L   |   I   |   C   |  Ess  |  Edg  |  Mag  |
+|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|   2   |   2   |   2   |   2   |   2   |   2   |   2   |   2   |   6   |   3   |   -   |
 
+*This is the basic template for a human stat block.
+Here would be the physica (or otherwise) description of the creature.
+You can be as verbose or as sparse as you like.*
 
-# Chapter 2
-|   B   |   A   |   R   |   S   |   W   |   L   |   I   |   C   |  Ess  |  Edg  |
-|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-|   2   |   2   |   2   |   2   |   2   |   2   |   2   |   2   |   6   |   3   |
+---
+|||
+|:------:|:-----|
+|skill 1 |7 = [A] + 5|
+|skill 2 |7 = [W] + 5|
+
+---
+***Item***: There would be a piece of gear or an ability listed here.

@@ -27,6 +27,7 @@ Depending on the complexity of the job, it may cover multiple gaming sessions.
 The way they pull off the run, the people they help, and the people they hurt can set the stage for future missions and plot developments.
 As a game session progresses, players will meet obstacles or have the chance to use their skills to carry out their plan.
 
+![alt text](http://scp-wiki.wdfiles.com/local--files/scp-099/portrait.jpg)
 ## The Dice To Use
 Shadowrun exclusivly uses six-sided dice for every roll that is made.",
 Throughout the text, six-sided dice are abbreviated as D6, sometimes with a number in front telling you how many dice are to be rolled.

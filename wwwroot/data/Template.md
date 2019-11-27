@@ -10,6 +10,9 @@ The section type will start a new paragraph and allow you to have a title.
 Each nested section will scale down header tag of the title.
 
 ### Sub-section 
+Here's our logo (hover to see the title text): 
+![alt text](http://scp-wiki.wdfiles.com/local--files/scp-009/SCP-009.jpg)
+
 #### A section doesn't need entries:
 ##### Italic Bold Title:
 **You can bold specific sentances as well.**

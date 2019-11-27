@@ -1,12 +1,14 @@
 ﻿@using System.Web;
 @model Book
 
-<div class="col-md-6" id="content"></div>
-<div class="col-md-2 no-print" id="sidebar"></div>
+<div class="col-lg-6" id="content"></div>
+<div class="col-lg-2 no-print" id="sidebar"></div>
 
 <script>
     $(function () {
         $('#content').html(new showdown.Converter({ tables: true, strikethrough: true }).makeHtml('@HttpUtility.JavaScriptStringEncode(Model.content)'));
+        $('#content img').wrap("<div class='img'></div>");
+
         RenderBookNavigation('content', 'sidebar');
     });
 </script>

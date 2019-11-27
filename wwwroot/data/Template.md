@@ -12,6 +12,8 @@ Each nested section will scale down header tag of the title.
 ### Sub-section 
 Here's our logo (hover to see the title text): 
 ![alt text](http://scp-wiki.wdfiles.com/local--files/scp-009/SCP-009.jpg)
+> You can nest a section in a paragraph and vice versa.
+> Paragrahps don't scale down the title.
 
 #### A section doesn't need entries:
 ##### Italic Bold Title:
@@ -21,8 +23,6 @@ Here's our logo (hover to see the title text):
 
 ---   
 
-> You can nest a section in a paragraph and vice versa.
-> Paragrahps don't scale down the title.
 
 # Chapter 2
 |   B   |   A   |   R   |   S   |   W   |   L   |   I   |   C   |  Ess  |  Edg  |

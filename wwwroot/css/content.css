@@ -5,8 +5,8 @@
     #content h1 {
         font-size: 2.5em;
         font-weight: bold;
-        border-bottom: 2px solid #a24ba2;
-        border-top: 2px solid #a24ba2;
+        border-bottom: 2px solid #0f0;
+        border-top: 2px solid #0f0;
         margin-top: 0;
         display: inline-block;
     }
@@ -14,7 +14,7 @@
     #content h2 {
         font-size: 2em;
         font-weight: bold;
-        border-bottom: 2px solid #a24ba2;
+        border-bottom: 2px solid #0f0;
         margin-top: 0;
         display: inline-block;
     }
@@ -55,10 +55,10 @@
     #content .img {
         border: 1px solid #000;
         box-shadow: 0 0 50px #000 inset;
-        float: left;
         border-radius: 10px;
         margin-right: 7px;
         height: auto;
+        float: left;
         max-width: 25% !important;
     }
 
@@ -69,13 +69,12 @@
         }
 
     #content img {
-        display: block;
-        position: relative;
         border-radius: 10px;
-        z-index: -1;
         position: relative;
-        height: auto;
         max-width: 100%;
+        display: block;
+        height: auto;
+        z-index: -1;
     }
 
     #content table {
@@ -93,7 +92,7 @@
     }
 
     #content th {
-        color: #a24ba2;
+        color: #0f0;
     }
 
     #content th,

@@ -27,7 +27,6 @@ Depending on the complexity of the job, it may cover multiple gaming sessions.
 The way they pull off the run, the people they help, and the people they hurt can set the stage for future missions and plot developments.
 As a game session progresses, players will meet obstacles or have the chance to use their skills to carry out their plan.
 
-![alt text](http://scp-wiki.wdfiles.com/local--files/scp-099/portrait.jpg)
 ## The Dice To Use
 Shadowrun exclusivly uses six-sided dice for every roll that is made.",
 Throughout the text, six-sided dice are abbreviated as D6, sometimes with a number in front telling you how many dice are to be rolled.
@@ -41,6 +40,7 @@ This will be made explicitly clear in the section where it is required.
 The number of dice rolled is called a **Dice Pool.**
 It is made up of a skill and a linked attribute.
 The numerical values of each are added together to form the dice pool.
+If the subject doesn't have one of the skill or attribute listed then it is treated as a 0.
 Some rolls may call for two attributes to be added together, or to add the same attribute twice.
 Additional modifiers, both positive and negative may also be applied to the dice pool based on situational circumstances.
 All these numbers summed together form a final count for the dice pool, this is called a **Test.**
@@ -100,37 +100,89 @@ They are the defining aspects of every character in the game.
 
 ### Attributes
 
-#### (B)ody:
+*(B)ody:*
 The attribute that determins how sturdy the character is.
 It contributes to the total ammount of damage that the character can take as well as how many dice are used to resist incoming damage.
 The body rating is also used to resist toxins that effect the character.
 
-#### (A)gility:
+*(A)gility:*
 The attrribute that determins how quick and nimble the character is.
 It contributes to the dice pools rolled when performing attacks with both ranged and melee weapons.
 The agility rating is also used in many key athetic skill tests.
 
-#### (R)eaction:
+*(R)eaction:*
 The attribute that determins the characters ability to respond to threats.
-It contributes to the dice pools rolled when defending against attacks and adds to the characters initiative score.
+It contributes to the dice pools rolled when defending against attacks and adds to the character's initiative score.
 The reaction score is also used in piloting vehicles and drones.
 
-#### (S)trength:
+*(S)trength:*
 The attribute that determins the physical power of the character.
 It contributes to the damage dealt by melee weapons wielded by the character.
 The strength score also contributes to certain skill tests and certain weapons require a minimum score to use.
 
-#### (W)illpower:
+*(W)illpower:*
 The attribute that determins the characters ability to focus their concentration.
 It contributes to certian skill tests when characters use an action to boost them.
 The willpower attribute could also be used for resisting spell drain.
 
-#### (L)ogic:
+*(L)ogic:*
 The attribute that determins how well the character can remember past experiences and facts.
 It contributes to many mental skill tests and is used for hacking the matrix.
 The logic attribute also determins how many knowledge skills and languages the character knows.
 
-#### (I)ntuition:
+*(I)ntuition:*
+The attribute that determins how well the character has flashes of inspiration.
+It contributes to the dice pools rolled when defending against attacks and adds to the character's initiative score.
+The intuition attribute is also used to defend against some magical and matrix based attacks.
+
+*(C)harisma:*
+The attribute that determins the quality of the character's social presense and good looks.
+It contributes to many social skill tests and helps lower the prices of gear.
+the charisma attribute could also be used for resisting spell drain.
+
+*(Mag)ic:*
+The attribute that determins the power and ammount of control the character has over spells and rituals.
+It contributes to the characters spellcasting, summoning, and counterspelling dice pools.
+Only mage characters can have a magic score above 0.
+
+*(Res)onance:*
+The attribute that determins how well the character can shape the matrix using only their mind.
+It contributes to the characters abilities to compile sprites and manipulate data.
+Only technomancers can have a resonance score above 0. 
+
+*(Edg)e:*
+The attribute that determins how lucky the character is.
+It can contribute to any test the character makes and can guarantee success at a high cost if neccisary.
+When used it may also cause any 6's rolled on the dice to contribute additional dice to the test as well.
+
+*(Ess)ence:*
+The attribute that determins the life force and humanity of the character.
+Every character begins with 6.0 essence and can lose it as they install cyberware or it is stolen by monsters.
+It also serves as a limit to how much magic or resonance a character can have.
+
+### Condition Monitor
+> Physical Condition Monitor = 8 + Body / 2 (*round up*)
+>
+> Stun Condition Monitor = 8 + Willpower / 2 (*round up*)
+
+The health of the character is tracked with different condition monitors.
+Each character has two primary ones: physical and stun.
+Every condition monitor is represented by a grid with three columns.
+When enough damage is taken to fill up an entire row (3 boxes) then a cumulative -1 penalty is taken to every test made by the character.
+If the stun condition monitor is filled up completly the character is rendered unconcious and any excess damage is transfered over to the physical condition monitor.
+If the pysical condition monitor is completly filled the character is in serious danger and any further damage will kill them.
+
+### Skills
+Skills are the primary measure of a characters ability to perform an action.
+Each one is linked to an attribute and both contribute to the dice pool rolled when the action calls for it.
+A given skill can never have a natural rating greater than 9, and can never be augmented above an additional 4. 
+
+### Initiative
+In certain situations, naimly in combat, a turn structure is required to simulate events and provide tension to appropriate chapters of the story.
 
 
-#### (C)harisma:
+### Gear
+### Contacts
+### Lifestyle
+# Playing The Game
+# Build A Runner

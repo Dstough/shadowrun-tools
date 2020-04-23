@@ -2,123 +2,120 @@
     margin-bottom: 50px;
 }
 
-    #content h1 {
-        font-size: 2.5em;
-        font-weight: bold;
-        border-bottom: 2px solid #0f0;
-        border-top: 2px solid #0f0;
-        margin-top: 0;
-        display: inline-block;
-    }
+#content h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    border-bottom: 2px solid #0f0;
+    border-top: 2px solid #0f0;
+    margin-top: 0;
+    display: inline-block;
+}
 
-    #content h2 {
-        font-size: 2em;
-        font-weight: bold;
-        border-bottom: 2px solid #0f0;
-        margin-top: 0;
-        display: inline-block;
-    }
+#content h2 {
+    font-size: 2em;
+    font-weight: bold;
+    border-bottom: 2px solid #0f0;
+    margin-top: 0;
+    display: inline-block;
+}
 
-    #content h3 {
-        font-size: 1.5em;
-        font-weight: bold;
-        page-break-after: avoid;
-        margin-top: 0;
-    }
+#content h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    page-break-after: avoid;
+    margin-top: 0;
+    color: #0a0;
+}
 
-    #content h4 {
-        font-weight: bold;
-        font-size: 1em;
-        margin-right: 5px;
-    }
+#content h4 {
+    font-weight: bold;
+    font-size: 1em;
+    margin-right: 5px;
+    color: #0a0;
+}
 
-    #content h5 {
-        font-weight: bold;
-        font-style: italic;
-        font-size: 1em;
-        margin-right: 5px;
-    }
+#content h5 {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1em;
+    margin-right: 5px;
+    color: #0a0;
+}
 
-    #content blockquote p {
-        text-indent: 0px;
-    }
+#content blockquote p {
+    text-indent: 0px;
+}
 
-    #content p {
-        margin-bottom: 3em;
-        font-size: 1em;
-        page-break-inside: avoid;
-        text-align: justify;
-        text-indent: 20px;
-    }
+#content p {
+    margin-bottom: 3em;
+    font-size: 1em;
+    page-break-inside: avoid;
+    text-align: justify;
+    text-indent: 20px;
+}
 
+#content .img {
+    border: 1px solid #000;
+    box-shadow: 0 0 50px #000 inset;
+    border-radius: 10px;
+    margin-right: 7px;
+    height: auto;
+    float: left;
+    max-width: 25% !important;
+}
 
-    #content .img {
-        border: 1px solid #000;
-        box-shadow: 0 0 50px #000 inset;
-        border-radius: 10px;
-        margin-right: 7px;
-        height: auto;
-        float: left;
-        max-width: 25% !important;
-    }
+#content .img:nth-child(even) {
+    float: right;
+    margin-right: 0px;
+    margin-left: 7px;
+}
 
-        #content .img:nth-child(even) {
-            float: right;
-            margin-right: 0px;
-            margin-left: 7px;
-        }
+#content img {
+    border-radius: 10px;
+    position: relative;
+    max-width: 100%;
+    display: block;
+    height: auto;
+    z-index: -1;
+}
 
-    #content img {
-        border-radius: 10px;
-        position: relative;
-        max-width: 100%;
-        display: block;
-        height: auto;
-        z-index: -1;
-    }
+#content table {
+    width: 100%;
+    table-layout: fixed;
+    margin-bottom: 1em;
+}
 
-    #content table {
-        width: 100%;
-        table-layout: fixed;
-        margin-bottom: 1em;
-    }
+#content td, #content th {
+    padding: 0;
+    text-align: center;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
 
-    #content td,
-    #content th {
-        padding: 0;
-        text-align: center;
-        overflow-x: hidden;
-        text-overflow: ellipsis;
-    }
+#content th {
+    color: #0f0;
+}
 
-    #content th {
-        color: #0f0;
-    }
+#content th, #content tr:nth-child(even) {
+    background-color: #111;
+}
 
-    #content th,
-    #content tr:nth-child(even) {
-        background-color: #111;
-    }
+#content blockquote {
+    background-color: #222;
+    padding: 10px;
+    border-left: 3px solid #aaa;
+    border-right: 3px solid #aaa;
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px #000;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 1em;
+    z-index: -2;
+}
 
-
-
-    #content blockquote {
-        background-color: #222;
-        padding: 10px;
-        border-left: 3px solid #aaa;
-        border-right: 3px solid #aaa;
-        border-radius: 5px;
-        box-shadow: inset 0 0 10px #000;
-        display: inline-block;
-        margin-bottom: 10px;
-        font-size: 1em;
-        z-index: -2;
-    }
-
-        #content blockquote p {
-            margin-bottom: 0;
-        }
-
+#content blockquote p {
+    margin-bottom: 0;
+}
 
 @media print {
     #content blockquote {

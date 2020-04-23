@@ -1,5 +1,5 @@
 ﻿function RenderBookNavigation(content, target) {
-    var html = '<ul><li id="bookmark-show-all">Show All</li></ul><ul>';
+    var html = '<ul><li id="bookmark-show-all" class="collapseable">Show All</li><ul>';
     html += Recurse($('#' + content).find('h1'));
     html += '</ul>';
     $('#' + target).html(html);
@@ -22,9 +22,9 @@
 function Recurse(list, level = 1) {
     var html = '';
     list.each(function () {
-        html += '<li id="bookmark-' + this.id + '">' + $(this).html() + '</li>';
+        html += '<li id="bookmark-' + this.id + '" class="collapseable">' + $(this).html() + '</li>';
         if ($(this).nextUntil('h' + level, 'h' + (level + 1)).length)
-            html += '<ul>';
+            html += '<ul class="collapse">';
         html += Recurse($(this).nextUntil('h' + level, 'h' + (level + 1)), level + 1);
         if ($(this).nextUntil('h' + level, 'h' + (level + 1)).length)
             html += '</ul>';

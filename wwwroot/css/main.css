@@ -1,13 +1,51 @@
+@font-face {
+    font-family: 'Cascadia';
+    src: url('../fonts/Cascadia.ttf');
+  }
+
+  @font-face {
+    font-family: 'CascadiaMono';
+    src: url('../fonts/CascadiaMono.ttf');
+  }
+
 body {
-    padding-top: 50px;
+    padding-top: 60px;
     padding-bottom: 20px;
-    font-family: "Consolas";
+    font-family: "Cascadia";
     color: #eee;
     text-shadow: 2px 2px 15px #000000;
     background-color: #323232;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 1)), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(to bottom, rgb(6, 6, 6), rgb(18, 18, 18));
     background-size: 100% 100%, 10px 10px, 10px 10px, 10px 5px;
     background-position: 0px 0px, 0px 0px, 5px 5px, 0px 0px;
+}
+
+a, a:visited{
+    cursor: pointer;
+    color: #0f0 !important;    
+}
+
+a::before{
+    content: "[";
+    color: #eee;
+}
+
+a::after{
+    content: "]";
+    color: #eee;
+}
+
+.navbar-header {
+    background: linear-gradient( #1e1e1e, #000);
+}
+
+.navbar {
+    background-color: #131313;
+    color: #eee !important;
+    background: linear-gradient( #1e1e1e, #000);
+    border-bottom: 0;
+    box-shadow: 0 0 7px black;
+    position: fixed;
 }
 
 .table {
@@ -64,6 +102,10 @@ body {
 
 .glyphicon-plus {
     color: #080;
+}
+
+blockquote{
+    font-family: "CascadiaMono";
 }
 
 @media print {

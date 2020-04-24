@@ -27,6 +27,7 @@
 
 #sidebar ul li::before {
     content: '> ';
+    color: #0a0;
 }
 
 #sidebar ul li:hover {

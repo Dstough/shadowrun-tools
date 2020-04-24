@@ -28,7 +28,7 @@ namespace shadowrun_tools
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Library}/{action=Index}/{Name?}");
+                    pattern: "{controller=Home}/{action=Index}/{Name?}");
             });
         }
     }

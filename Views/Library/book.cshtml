@@ -4,11 +4,14 @@
 <div class="col-lg-3 no-print" >
     <div id="sidebar"></div>
 </div>
-<div class="col-lg-7" id="content"></div>
+<div class="col-lg-7" id="content">@Model.content</div>
 
 <script>
     $(function () {
-        $('#content').html(new showdown.Converter({ tables: true, strikethrough: true }).makeHtml('@HttpUtility.JavaScriptStringEncode(Model.content)'));
+        var content = $('#content').html().replace(/&gt;/g,'>');
+        var html = new showdown.Converter({ tables: true, strikethrough: true }).makeHtml(content);
+
+        $('#content').html(html);
         $('#content img').wrap("<div class='img'></div>");
 
         RenderBookNavigation('content', 'sidebar');

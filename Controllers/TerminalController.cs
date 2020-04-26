@@ -4,20 +4,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace shadowrun_tools.Controllers
 {
-    public class HomeController : BaseController
+    public class TerminalController : BaseController
     {
-        public HomeController(IWebHostEnvironment env) : base(env)
+        public TerminalController(IWebHostEnvironment env) : base(env)
         { }
 
         public ActionResult Index()
-        {
-            return HandleExceptions(() =>
-            {
-                return View();
-            });
-        }
-
-        public ActionResult About()
         {
             return HandleExceptions(() =>
             {

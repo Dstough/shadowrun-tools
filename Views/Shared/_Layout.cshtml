@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link type="text/css" rel="stylesheet" href="~/css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="~/css/main.css">
     <link type="text/css" rel="stylesheet" href="~/css/content.css">
@@ -17,7 +17,6 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="col-lg-1"></div>
             <div class="col-lg-10">
-
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
@@ -30,6 +29,9 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav right">
                         <li class=''><a asp-area="" asp-controller="Library" asp-action="Index">Library</a></li>
+                        <li class=''><a asp-area="" asp-controller="ChangeLog" asp-action="Index">Change Log</a></li>
+                        <li class=''><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                        <li class=''><a asp-area="" asp-controller="Terminal" asp-action="Index">Terminal</a></li>
                     </ul>
                 </div>
             </div>

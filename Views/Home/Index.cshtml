@@ -1,17 +1,68 @@
+@using System
+
 <div class="col-lg-1"></div>
 <div class="col-lg-8">
 <div id="content">
-    <div style="text-align: center;" >
+    <div style="text-align: center; margin-bottom: 50px;" >
         <img style="margin-left:auto;margin-right:auto;max-height:250px;" src="~/images/shadowrun-logo.svg" />
         <h1>Shadowrun: Jackpoint Edition</h1>
     </div>
+
     <p>
-        After the recent dissapointing release of more recent editions of shadowrun, I decided to write my own version of the shadowrun rule set.
-        The plan for Jackpoint is to serve as a living rulebook library.
-        There will be updates made to the game manuals hosted on this site as time goes on.
-        All the changes will be posted to the change log and they will each have an explanation.
-        The reader page is set up to be easy to print specific sections of the rules but it is preferable to just use the site for rules references as you play.
+        A large paragraph goes here that pulls the text from the most recent change log.
+        These will typically only be about 1 paragraph in length so it should fit on the main page.
+        It will serve to round out the page and make it look complete.
     </p>
+
+    <article>
+        <div class="thread-metadata text-muted">
+            <span>@DateTime.Now.AddYears(60).ToString("MMMM dd, yyyy hh:mm tt")</span>
+        </div>
+        <div>
+            <div style="text-align: center; margin-top:5px;">
+                <h3> <a href="/library/index">Library</a></h3>
+            </div>
+            <span class="message-body">
+                <p>
+                    View the books in the web reader.
+                    Bookmarks are provided the page.
+                    It is suited for tablet and phone viewing as well as printing.
+                </p>
+            </span>
+        </div>
+    </article><article>
+        <div class="thread-metadata text-muted">
+            <span>@DateTime.Now.AddYears(60).ToString("MMMM dd, yyyy hh:mm tt")</span>
+        </div>
+        <div>
+            <div style="text-align: center; margin-top:5px;">
+                <h3><a href="/library/index">Change Log</a></h3>
+            </div>
+            <span class="message-body">
+                <p>
+                    View the changes and the updates made to the published books.
+                    There are also announcements of new books being released.
+                    Minor typo's and the like will not be reported.
+                </p>
+            </span>
+        </div>
+    </article><article>
+        <div class="thread-metadata text-muted">
+            <span>@DateTime.Now.AddYears(60).ToString("MMMM dd, yyyy hh:mm tt")</span>
+        </div>
+        <div>
+            <div style="text-align: center; margin-top:5px;">
+                <h3><a href="/library/index">About</a></h3>
+            </div>
+            <span class="message-body">
+                <p>
+                    Who am I and what I am trying to do here.
+                    There is no contact information however.
+                    I can't give that info out.
+                </p>
+            </span>
+        </div>
+    </article>
 </div>
 </div>
 <div class="col-lg-1"></div>

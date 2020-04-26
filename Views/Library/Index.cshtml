@@ -1,15 +1,18 @@
 ﻿@model Library
-
-<div class="col-lg-10">
-    <h2>Library</h2><br />
+<div class="col-lg-10" id="content">
     @foreach (var key in Model.Contents.Keys)
-    {
-        <div class="table">
-            <div class="header">@key</div>
-            @foreach (var book in Model.Contents[key])
-            {
-                <div class="body" onclick="location.href = '/Library/Book/@book';">@book</div>
-            }
-        </div>
-    }
+    {<div style="margin-bottom: 50px;">
+        <h2>@key</h2><br />
+        @foreach (var book in Model.Contents[key])
+        {<article style="min-height: 90px;min-height: 90px;width: auto; margin-left: 0px; margin-right: 10px; margin-bottom: 10px;">
+            <div class="thread-metadata text-muted">
+                <span>@book.lastModified.AddYears(60).ToString("MMMM dd, yyyy hh:mm tt")</span>
+            </div>
+            <div>
+                <div style="text-align: center; margin-top:5px;">
+                    <h6><a href="/library/book/@book.title">@book.title</a></h6>
+                </div>
+            </div>
+        </article>}<br />
+    </div>}
 </div>
